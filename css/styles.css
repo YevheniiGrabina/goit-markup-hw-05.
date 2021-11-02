@@ -36,7 +36,6 @@ body {
 }
 .header-container {
   display: flex;
-  align-items: baseline;
 }
 .container {
   width: 1200px;
@@ -137,7 +136,7 @@ body {
   background: var(--accent-color);
 border-radius: 2px;
 display: block;
-bottom: 0;
+bottom: -1px;
 }
 .link {
   font-family: Roboto;
@@ -337,21 +336,20 @@ bottom: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
   background: rgba(47, 48, 58, 0.8);
 }
 .box-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 370px;
   height: 70px;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  margin-left: auto;
-  margin-right: auto;
+  
 }
 .section-bg {
   background-color: #f5f4fa;
@@ -426,7 +424,8 @@ bottom: 0;
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
-  transition: background-color 250ms linear;
+  transition: background-color 3s linear;
+ 
 }
 .social-link:hover,
 .social-link:focus {
@@ -437,8 +436,7 @@ bottom: 0;
   fill: var(--primary-title-color);
 }
 .team-icon: {
-  fill: #afb1b8;
-  transition: fill 250ms linear;
+  transition: fill 3s linear;
 }
 .cliet-title {
 }
