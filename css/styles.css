@@ -128,15 +128,15 @@ body {
   padding-bottom: 32px;
   padding-top: 32px;
 }
-.current::after{
+.current::after {
   content: "";
   width: 100%;
   height: 4px;
   position: absolute;
   background: var(--accent-color);
-border-radius: 2px;
-display: block;
-bottom: -1px;
+  border-radius: 2px;
+  display: block;
+  bottom: -1px;
 }
 .link {
   font-family: Roboto;
@@ -349,7 +349,6 @@ bottom: -1px;
   left: 0;
   width: 370px;
   height: 70px;
-  
 }
 .section-bg {
   background-color: #f5f4fa;
@@ -425,7 +424,6 @@ bottom: -1px;
   justify-content: center;
   fill: #afb1b8;
   transition: background-color 250ms linear;
- 
 }
 .social-link:hover,
 .social-link:focus {
@@ -655,7 +653,8 @@ bottom: -1px;
   padding-left: 22px;
   align-items: center;
   border-radius: 4px;
-  transition: color 250ms linear, background-color 250ms linear, box-shadow 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear,
+    box-shadow 250ms linear;
 }
 
 .btn-active {
@@ -701,8 +700,7 @@ bottom: -1px;
   list-style: none;
   transition: box-shadow 250ms linear;
 }
-.flex-element:hover,
-.flex-element:focus {
+.flex-element:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -712,7 +710,8 @@ bottom: -1px;
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.flex-element:hover .project-overlay {
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
   transform: translateY(0);
 }
 .project-overlay {
@@ -732,13 +731,22 @@ bottom: -1px;
   transform: translateY(100%);
   transition: transform 250ms linear;
 }
-.project-element {
+.project-link {
+  display: block;
   text-decoration: none;
+  color: var(--primary-text-color);
+  border-color: rgba(238, 238, 238, 1);
+  transition: box-shadow 250ms linear;
+}
+.overlay {
   position: relative;
+  display: flex;
   overflow: hidden;
 }
-.project-link{
-  
+.project-link:focus{
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 .portfolio-group {
   border: 1px solid #eeeeee;
@@ -786,39 +794,40 @@ img {
   display: block;
 }
 
-.backdrop{
+.backdrop {
   width: 100vw;
-height: 100vh;
-background: rgba(0, 0, 0, 0.2);
-position: fixed;
-top: 0;
-transition: opacity 250ms linear, visibility 250ms linear;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
-.modal{
+.modal {
   position: absolute;
   width: 528px;
-height: 581px;
-background: var(--primary-title-color);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-top: 50%;
-left: 50%;
-transform: translate(-50% , -50%)
+  height: 581px;
+  background: var(--primary-title-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.modal-btn{
-  background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.1);
-width: 30px;
-height: 30px;
-border-radius: 50%;
-position: absolute;
-top: 8px;
-right: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
+.modal-btn {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
